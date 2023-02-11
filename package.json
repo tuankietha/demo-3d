@@ -1,5 +1,5 @@
 {
-  "name": "demo-3D",
+  "name": "demo-3d",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -14,9 +14,10 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/pwa": "^3.3.5",
+    "@plogg/three": "^1.0.7",
     "core-js": "^3.25.3",
     "nuxt": "^2.15.8",
-    "three": "^0.149.0",
+    "three": "^0.139.2",
     "vue": "^2.7.10",
     "vue-server-renderer": "^2.7.10",
     "vue-template-compiler": "^2.7.10",
