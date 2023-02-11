@@ -1,9 +1,9 @@
 <template>
-  <img
-    class="vuetify-logo"
-    alt="Vuetify Logo"
-    src="/vuetify-logo.svg"
-  >
+	<img
+		class="vuetify-logo"
+		alt="Vuetify Logo"
+		src="/vuetify-logo.svg"
+	>
 </template>
 
 <style>
@@ -16,7 +16,7 @@
 
 @keyframes turn {
   100% {
-    transform: rotateY(0deg);
+	transform: rotateY(0deg);
   }
 }
 </style>
