@@ -2,7 +2,6 @@
   "name": "new-nuxt",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://thuanpham113.github.io/demo-3d",
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
