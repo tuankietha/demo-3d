@@ -3,3 +3,24 @@
 // The variables you want to modify
 // $font-size-root: 20px;
 @import "pointer.scss";
+
+// Scrollbars
+::-webkit-scrollbar{
+	width: 8px;
+	height: 8px;
+}
+
+::-webkit-scrollbar-thumb{
+	background: #B3AFB3;
+	border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+	background: #C7C7C7;
+}
+
+::-webkit-scrollbar-track{
+	background: #F0F0F0;
+	border-radius: 8px;
+	box-shadow: inset 0px 0px 0px 0px #F0F0F0;
+}
