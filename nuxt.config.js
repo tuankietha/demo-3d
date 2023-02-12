@@ -19,7 +19,7 @@ export default {
 
 	target: 'static',
     router: {
-        base: '/demo-3d/'
+        base: '/'
     },
 
 	// Global CSS: https://go.nuxtjs.dev/config-css
