@@ -1,7 +1,7 @@
 <template>
 	<div style="height: 100vh; width: 100vw; position: relative">
 		<v-sheet height="100%" width="100%" class="pa-10" color="black" style="position: absolute">
-			<instruction-player ref="player" border-radius="50px" src="../mercedes.glb" />
+			<instruction-player ref="player" border-radius="50px" src="/mercedes.glb" />
 		</v-sheet>
 		<div style="height: 100%; width: 100%; position: absolute" class="pointer-events-none">
 			<div class="d-flex flex-column justify-center pointer-events-none" style="height: 100%;">
