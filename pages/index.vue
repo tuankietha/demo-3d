@@ -9,7 +9,7 @@
 				<v-card height="50px" width="50px" color="green" class="ma-2 pointer-events-auto" @click="greeen" />
 				<v-card height="50px" width="50px" color="#f1c232" class="ma-2 pointer-events-auto" @click="yellow" />
 				<v-card height="50px" width="50px" color="white" class="ma-2 pointer-events-auto" @click="white" />
-				<v-card height="50px" width="50px" color="black" class="ma-2 pointer-events-auto" @click="black" />
+				<v-card height="50px" width="50px" color="black" class="ma-2 pointer-events-auto" @click="black" style="border: 2px solid white"/>
 			</div>
 		</div>
 	</div>
