@@ -17,7 +17,7 @@ export default {
 		link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
 	},
 
-	target: "server",
+	target: 'static',
     router: {
         base: '/demo-3d/'
     },
