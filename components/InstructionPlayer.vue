@@ -9,11 +9,11 @@
 </template>
 
 <script>
-import * as THREE from "@plogg/three";
-import { GLTFLoader } from "@plogg/three/examples/jsm/loaders/GLTFLoader";
-import { OrbitControls } from "@plogg/three/examples/jsm/controls/OrbitControls.js";
-import { TransformControls } from "@plogg/three/examples/jsm/controls/TransformControls.js";
-import { RoomEnvironment } from "@plogg/three/examples/jsm/environments/RoomEnvironment.js";
+import * as THREE from "three";
+import { GLTFLoader } from "../node_modules/three/examples/jsm/loaders/GLTFLoader";
+import { OrbitControls } from "../node_modules/three/examples/jsm/controls/OrbitControls.js";
+import { TransformControls } from "../node_modules/three/examples/jsm/controls/TransformControls.js";
+import { RoomEnvironment } from "../node_modules/three/examples/jsm/environments/RoomEnvironment.js";
 class Asset {
 	constructor (meshes) {
 		this.meshes = meshes;
