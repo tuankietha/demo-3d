@@ -1,7 +1,7 @@
 <template>
 	<div style="height: 100vh; width: 100vw; position: relative">
 		<v-sheet height="100%" width="100%" class="pa-10" color="black" style="position: absolute">
-			<instruction-player ref="player" border-radius="50px" src="/mercedes.glb" />
+			<instruction-player ref="player" border-radius="50px" src="/umbreon.glb" />
 		</v-sheet>
 		<div style="height: 100%; width: 100%; position: absolute" class="pointer-events-none">
 			<div class="d-flex flex-column justify-center pointer-events-none" style="height: 100%;">
@@ -16,19 +16,25 @@
 </template>
 
 <script>
+import * as THREE from "three";
+import { GLTFLoader } from "../node_modules/three/examples/jsm/loaders/GLTFLoader";
+import { OrbitControls } from "../node_modules/three/examples/jsm/controls/OrbitControls.js";
+import { TransformControls } from "../node_modules/three/examples/jsm/controls/TransformControls.js";
+import { RoomEnvironment } from "../node_modules/three/examples/jsm/environments/RoomEnvironment.js";
 export default {
 	name: "IndexPage",
 	methods: {
 		red () {
-			const mesh = this.$refs.player.scene.getObjectByName("Cylinder_34_0");
+			const mesh = this.$refs.player.scene.getObjectByName(this.$refs.player.mesh);
 
 			mesh.material.color.r = 244;
 			mesh.material.color.g = 1;
 			mesh.material.color.b = 1;
 			mesh.material.envMapIntensity = 0;
+			console.log(this.$refs.player.scene);
 		},
 		greeen () {
-			const mesh = this.$refs.player.scene.getObjectByName("Cylinder_34_0");
+			const mesh = this.$refs.player.scene.getObjectByName(this.$refs.player.mesh);
 
 			mesh.material.color.r = 1;
 			mesh.material.color.g = 100;
@@ -36,7 +42,7 @@ export default {
 			mesh.material.envMapIntensity = 0;
 		},
 		white () {
-			const mesh = this.$refs.player.scene.getObjectByName("Cylinder_34_0");
+			const mesh = this.$refs.player.scene.getObjectByName(this.$refs.player.mesh);
 
 			mesh.material.color.r = 255;
 			mesh.material.color.g = 255;
@@ -44,7 +50,7 @@ export default {
 			mesh.material.envMapIntensity = 0;
 		},
 		yellow () {
-			const mesh = this.$refs.player.scene.getObjectByName("Cylinder_34_0");
+			const mesh = this.$refs.player.scene.getObjectByName(this.$refs.player.mesh);
 
 			mesh.material.color.r = 100;
 			mesh.material.color.g = 100;
@@ -52,13 +58,31 @@ export default {
 			mesh.material.envMapIntensity = 0;
 		},
 		black () {
-			const mesh = this.$refs.player.scene.getObjectByName("Cylinder_34_0");
+			const mesh = this.$refs.player.scene.getObjectByName(this.$refs.player.mesh);
 
 			mesh.material.color.r = 1;
 			mesh.material.color.g = 1;
 			mesh.material.color.b = 1;
-			mesh.material.envMapIntensity = 1;
+			mesh.material.envMapIntensity = 0;
+		},
+		hoverObject(){
+
+		},
+		chooseObject(){
+
 		}
+	},
+	mounted(){
+		// const mousePosition = new THREE.Vector2();
+		// const raycaster = new THREE.Raycaster();
+
+		// let intersects;
+
+		// window.addEventListener("mouseover", function(e){
+			
+		// 	raycaster.setFromCamera(mousePosition, THREE.Camera);
+		// 	console.log(raycaster);
+		// });
 	}
 };
 </script>

@@ -108,6 +108,19 @@ export default {
 		this.animate();
 
 		this.$refs.player3d.children[0].style.borderRadius = this.borderRadius || "0px";
+		
+		const raycaster = new THREE.Raycaster();
+		const clickMouse = new THREE.Vector2();
+		
+		// window.addEventListener('click',event =>{
+		// 	clickMouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+		// 	clickMouse.y = -(event.clientX / window.innerHeight) * 2 + 1;
+		// 	raycaster.setFromCamera( clickMouse, this.camera);
+		// 	const find = raycaster.intersectObjects(this.scene.children);
+			
+		// 	console.log(find.length);
+			
+		// })
 	},
 
 	methods: {
@@ -139,16 +152,23 @@ export default {
 				.flat();
 
 			const intersects = raycaster.intersectObjects(meshes, true);
-
+			 
 			if (intersects[0] !== undefined) {
 				this.objectMesh = intersects[0];
 				// this.transformControls.attach(intersects[0].object);
 				intersects[0].object.traverseAncestors((ancestors) => {
 					if (ancestors.userData.asset !== undefined) {
+						this.objectMesh = ancestors.userData.asset.meshes[0].children[0].children;
+
 						this.gltfName = ancestors.userData.asset.name;
 					}
 				});
 			}
+
+			intersects.forEach(item =>{
+				this.mesh = item.object.name
+				// console.log(item.object.name)
+			})
 		},
 		loadGLTF (gltfArrayBuffer) {
 			const loader = new GLTFLoader();
