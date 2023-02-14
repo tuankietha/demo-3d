@@ -158,7 +158,8 @@ export default {
 				// this.transformControls.attach(intersects[0].object);
 				intersects[0].object.traverseAncestors((ancestors) => {
 					if (ancestors.userData.asset !== undefined) {
-						this.objectMesh = ancestors.userData.asset.meshes[0].children[0].children;
+						let getAsset = ancestors.userData.asset
+						this.objectMesh = getAsset.meshes[0].children[0].children;
 
 						this.gltfName = ancestors.userData.asset.name;
 					}
